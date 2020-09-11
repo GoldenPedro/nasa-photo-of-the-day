@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PhotoObject from './components/photoObject'
 import axios from 'axios';
 import "./App.css";
+import {Header, Container} from './components/styles'
 
 function App() {
   const [data, setData] = useState('')
@@ -18,8 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NASA Photo of The Day!</h1>
-      <PhotoObject data={data} />
+      <Container>
+        <Header>
+          <h1>NASA Photo of The Day!</h1>
+        </Header>
+        <PhotoObject data={data} />
+      </Container>
     </div>
   );
 }
